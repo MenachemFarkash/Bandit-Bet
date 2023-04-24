@@ -1,0 +1,11 @@
+.navbarItem h4 {
+    margin: 0;
+    font-size: large;
+}
+
+.navbarItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}

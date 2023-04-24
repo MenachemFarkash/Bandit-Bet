@@ -1,0 +1,311 @@
+.crateConfigureContainer {
+    background: linear-gradient(#000000ba, #000000cc), url(../../../../public/Background/background.jpg);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 10em 0 10em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+@media (max-width: 1500px) {
+    .crateConfigureContainer {
+        grid-column: 1 / -1;
+    }
+}
+
+.crateConfigureGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    row-gap: 1em;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 900px;
+}
+
+.crateConfigureTitle {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 0;
+}
+
+.gameModeContainer {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background-color: rgba(110, 107, 101, 0.55);
+    padding-inline: 1em;
+    max-width: 280px;
+    height: 84px;
+}
+
+.teamConfigurationTitle {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: white;
+}
+
+.gameModeIcon {
+    font-size: 40px;
+    height: 40px;
+}
+
+.chosenMode {
+    border: none;
+    background-color: #d76755;
+    margin-right: 0.5em;
+    padding-inline: 8px;
+    padding-block: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.modeNameAndButtons h4 {
+    margin: 0;
+    color: white;
+}
+.modeNameAndButtons .modeButton {
+    border: none;
+    background-color: #555;
+    margin-right: 0.5em;
+    padding-inline: 8px;
+    padding-block: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+.modeNameAndButtons .modeButton:hover {
+    background-color: #706d6d;
+}
+
+.mode1 .gameModeIcon {
+    color: #d76755;
+}
+.mode2 .gameModeIcon {
+    color: #84da89;
+}
+.mode3 .gameModeIcon {
+    color: #8cc2e7;
+}
+
+.mode1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.mode2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.mode3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.crateConfigureTitle {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.backButton {
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.battleRounds {
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.cratesPreviewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 280px;
+    overflow-y: auto;
+    gap: 0.5em;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.addCrateButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 198px;
+    width: 165px;
+    background-color: #191f19;
+    color: lightskyblue;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.addCrateButton:hover {
+    background-color: #131613;
+    transform: translateY(-5px);
+}
+
+.spacialModeCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    max-width: 100%;
+    padding-inline: 1em;
+    background-color: rgba(128, 128, 128, 0.651);
+    transition: all 0.2s;
+}
+
+.spacialModeCard:hover {
+    transform: translateY(-4px);
+}
+
+.spacialModeIcon {
+    font-size: 30px;
+    height: 30px;
+}
+
+.spacialModeNameAndInfo {
+    width: 80%;
+}
+
+.spacialModeNameAndInfo h4,
+.spacialModeNameAndInfo h5 {
+    margin: 0;
+}
+
+.card1 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    color: var(--color);
+}
+.card2 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    color: var(--color);
+}
+.card3 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    color: var(--color);
+}
+
+.startBattleButton {
+    grid-column-start: 3;
+    grid-column-end: -1;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    width: 33%;
+    justify-self: end;
+}
+
+.plusSquare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 2px dashed lightskyblue;
+    color: lightskyblue;
+    font-size: 40px;
+}
+
+.startBattleButton {
+    border: none;
+    background-color: #66852f;
+    padding: 6px 10px;
+    width: 145px;
+    height: 45px;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+.startBattleButton:hover {
+    background-color: #719435;
+}
+
+.switch {
+    --secondary-container: #3a4b39;
+    --primary: #84da89;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 2.8em;
+    height: 1.4em;
+}
+
+.switch .spacialInput {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #313033;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 1em;
+    border-radius: 20px;
+    left: 0.2em;
+    bottom: 0.2em;
+    background-color: #aeaaae;
+    transition: 0.2s;
+}
+
+.spacialInput:checked + .slider::before {
+    background-color: var(--primary);
+}
+
+.spacialInput:checked + .slider {
+    background-color: var(--secondary-container);
+}
+
+.spacialInput:focus + .slider {
+    box-shadow: 0 0 1px var(--secondary-container);
+}
+
+.spacialInput:checked + .slider:before {
+    transform: translateX(1.4em);
+}

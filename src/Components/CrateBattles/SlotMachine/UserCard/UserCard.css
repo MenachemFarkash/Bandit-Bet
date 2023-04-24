@@ -1,0 +1,29 @@
+.userCardContainer {
+    display: flex;
+    gap: 0.2em;
+    width: 200px;
+    height: 48px;
+}
+
+.userPictureBackground {
+    width: 48px;
+    height: 48px;
+    background-color: grey;
+}
+
+.userPicture {
+    width: 48px;
+    height: 48px;
+    background-color: #ddbd08;
+    transform: translateX(-4px) translateY(-4px);
+}
+
+.userName {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 146px;
+    padding-left: 0.2em;
+    background-color: grey;
+    color: #8cc2e7;
+}

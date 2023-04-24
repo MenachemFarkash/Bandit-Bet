@@ -1,0 +1,133 @@
+.slotMachineContainer {
+    background: linear-gradient(#000000ba, #000000cc), url(../../../../public/Background/background.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 2em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+@media (max-width: 1500px) {
+    .slotMachineContainer {
+        grid-column: 1 / -1;
+    }
+}
+
+.slot1 {
+    height: 250px;
+    overflow-y: hidden;
+    width: 150px;
+    padding: 1em;
+}
+
+.slotMachine {
+    height: 281px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 1em 0 1em;
+    width: 1190px;
+    background: linear-gradient(#000000a1, #000000a1), url(./SlotBackground.jpeg);
+    background-size: cover;
+}
+.slot1 img {
+    width: 130px;
+}
+
+.scroll {
+    animation: scrollDown 5.1s forwards;
+}
+
+.wonItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 1.2;
+    transition: all 0.5s;
+}
+
+.aboveWinItem {
+    transition: all 0.3s;
+    transform: translateY(-70px);
+}
+
+.belowWinItem {
+    transition: all 0.3s;
+    transform: translateY(70px);
+}
+
+.items {
+    transform: translateY(-5255px);
+}
+@keyframes scrollDown {
+    0% {
+        transform: translateY(0px);
+    }
+    87% {
+        transform: translateY(-5280px);
+    }
+    95% {
+        transform: translateY(-5280px);
+    }
+    100% {
+        transform: translateY(-5255px);
+    }
+}
+
+.imagesTest img {
+    width: 150px;
+}
+
+.usersCardList {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+    width: 1000px;
+    transform: translateY(-2em);
+}
+
+.gameResultDisplay {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    height: 350px;
+    padding: 0.5em 0;
+    width: 917px;
+}
+
+.redLines {
+    position: absolute;
+    display: flex;
+    gap: 4em;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 115%;
+    transform: translateY(75px);
+}
+
+.redLine {
+    width: calc(100% / 6);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgb(199, 13, 13), transparent);
+}
+
+.rightArrow {
+    transform: rotateZ(88deg) translateY(55px);
+}
+.leftArrow {
+    transform: rotateZ(-92deg) translateY(55px);
+}
+
+.prizeSumCounter {
+    color: white;
+    transform: translateY(65px);
+    font-size: 40px;
+    animation: pop 0.6s forwards;
+}

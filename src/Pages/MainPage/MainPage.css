@@ -1,0 +1,24 @@
+.mainPageContainer {
+    background: linear-gradient(#000000ba, #000000cc), url(../../../public/Background/mainBackground.jpeg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.gameModesContainer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .mainPageContainer {
+        grid-column-start: 1;
+    }
+}

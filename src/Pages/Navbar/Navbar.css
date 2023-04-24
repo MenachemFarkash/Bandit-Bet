@@ -1,0 +1,63 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #0e110e;
+    padding: 4px 16px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarMenus {
+    display: flex;
+    margin-left: 220px;
+    font-size: xx-large;
+    gap: 0.7em;
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 30px;
+    border-radius: 99px;
+    padding: 2px 0 2px 10px;
+    color: white;
+    gap: 0.3em;
+}
+
+.balance button {
+    border: none;
+    background-color: #66852f;
+    height: 100%;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: white;
+    padding-inline: 10px;
+}
+
+.mainLogo {
+    position: fixed;
+    width: 180px;
+    transition: all 700ms;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+@media (max-width: 1250px) {
+    .mainLogo {
+        width: 130px;
+    }
+}
+@media (max-width: 900px) {
+    .mainLogo {
+        width: 90px;
+    }
+}

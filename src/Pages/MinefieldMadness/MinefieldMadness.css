@@ -1,0 +1,108 @@
+.minefieldContainer {
+    background: linear-gradient(#000000ba, #000000cc), url(../../../public/Background/minefieldBackground.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 2em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+.minesBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    border-radius: 7px;
+    background-image: url(../../../public/Background/minefieldBoardbackground.jpeg);
+    box-shadow: inset 0 0 10px #000, inset 0 0 80px rgba(0, 0, 0, 0.5), inset 0 0 200px rgba(0, 0, 0, 0.8),
+        inset 0 0 500px rgba(0, 0, 0, 0.4);
+    filter: brightness(0.6);
+}
+
+.minefieldTiles {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    filter: brightness(1);
+}
+
+.minefieldTiles img {
+    width: 100%;
+}
+
+.gameSettings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1em;
+    height: 600px;
+    width: 470px;
+}
+
+.infoCard {
+    display: flex;
+    align-items: center;
+    background-color: #141814;
+}
+.infoCard h4 {
+    color: white;
+    margin-bottom: 0;
+}
+.infoCard p {
+    color: white;
+    margin-top: 0;
+    font-size: smaller;
+}
+
+.settings {
+    background-color: #0a0c0a;
+    padding: 0.5em;
+}
+
+.betSettings h5 {
+    margin: 2px;
+    font-size: 10px;
+    color: white;
+}
+
+.betSettings div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.betButtons div {
+    background-color: #191f19;
+    font-size: small;
+    color: #b7d486;
+    font-weight: 700;
+}
+
+.scrapLogo {
+    width: 20px;
+}
+
+.betAmountInput {
+    height: 48px;
+    width: 270;
+    padding: 0 1em;
+}
+.betAmountInput input,
+.betAmountInput input:focus-visible {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}

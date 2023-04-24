@@ -1,0 +1,98 @@
+.battleCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #141814;
+    height: 5em;
+    margin-bottom: 15px;
+    padding: 0.5em;
+    max-width: 1035px;
+    width: 100%;
+}
+
+.joinButtons {
+    display: flex;
+    gap: 10px;
+}
+.joinButtons button {
+    background-color: #aade4e;
+    border: none;
+    width: 3em;
+    height: 3em;
+    transform: rotate(-8deg);
+    cursor: pointer;
+}
+.joinButtons button > span {
+    display: block;
+    background-color: #3e423e;
+    width: 3em;
+    height: 3em;
+    transform: translateY(-5px) translateX(-8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: #aade4e;
+}
+
+.joinButtons button::after {
+    background-color: black;
+}
+.battleCardContainer img {
+    width: 15px;
+    object-fit: contain;
+}
+
+.priceAndType {
+    display: flex;
+    gap: 5px;
+    color: rgb(106, 153, 214);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.cratesList {
+    display: flex;
+    align-items: center;
+    justify-self: left;
+    margin-left: 4em;
+    gap: 0.5em;
+}
+
+.cratesList img {
+    width: 75px;
+}
+
+.joinAndRounds {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.joinAndRounds p {
+    color: #abb4ab;
+}
+
+.joinBattle {
+    background-color: #66852f;
+    border: none;
+    font-size: smaller;
+    padding: 4px 10px;
+    color: #eef8dc;
+    height: 2.5em;
+}
+
+.watchBattle {
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: #606460;
+    color: white;
+    align-items: center;
+    height: 2.5em;
+    width: 2.5em;
+}

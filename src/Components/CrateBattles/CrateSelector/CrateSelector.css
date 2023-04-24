@@ -1,0 +1,55 @@
+.cratesSelector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+    width: 860px;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.crateCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #141814;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    width: 160px;
+    color: white;
+    font-weight: 500;
+    font-family: sans-serif !important;
+}
+
+.crateCard img {
+    width: 140px;
+}
+
+.addButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1em;
+    border: none;
+    background-color: #66852f;
+    color: white;
+    padding: 0.5em 0.75em;
+    font-weight: 600;
+    cursor: pointer;
+    gap: 5px;
+    transition: all 300ms;
+}
+
+.addButton p {
+    margin: 0;
+    font-size: small;
+}
+
+.addButton img {
+    width: 20px;
+}
+
+.addButton:hover {
+    background-color: #709235;
+}
