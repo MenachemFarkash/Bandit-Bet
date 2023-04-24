@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+Rust Gambling Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a gambling site based on the game Rust, built using React and Node.js. The site allows users to bet on various in-game events and outcomes, and potentially win big prizes.
+Installation
 
-## Available Scripts
+To run the Rust Gambling Site, you'll need to have Node.js installed on your system. You can download it from the official website.
 
-In the project directory, you can run:
+Once you have Node.js installed, you can clone the repository to your local machine:
 
-### `npm start`
+bash
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+git clone https://github.com/your-username/rust-gambling-site.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Then, navigate to the project directory and install the necessary dependencies:
 
-### `npm test`
+bash
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+cd rust-gambling-site
+npm install
 
-### `npm run build`
+Running the Site
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To start the site, you'll need to run two separate commands in different terminal windows.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In the first terminal window, start the Node.js server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+arduino
 
-### `npm run eject`
+npm run server
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+In the second terminal window, start the React app:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+arduino
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm run start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Once both commands are running, you should be able to access the site in your web browser at http://localhost:3000.
+Usage
 
-## Learn More
+The Rust Gambling Site allows users to place bets on various in-game events and outcomes. Users can create an account, deposit funds, and place bets on different matches.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The site uses a virtual currency called "Rust Coins," which can be purchased with real money. Users can use Rust Coins to place bets and potentially win big prizes.
