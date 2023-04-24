@@ -1,4 +1,4 @@
-Rust Gambling Site
+# Bandit-Bet
 
 This is a gambling site based on the game Rust, built using React and Node.js. The site allows users to bet on various in-game events and outcomes, and potentially win big prizes.
 Installation
