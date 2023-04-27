@@ -11,34 +11,37 @@ import MainPage from "./Pages/MainPage/MainPage";
 import ConfigureCrateBattle from "./Components/CrateBattles/ConfigureCrateBattle/ConfigureCrateBattle";
 import MinefieldMandness from "./Pages/MinefieldMadness/MinefieldMadness";
 import SlotMachine from "./Components/CrateBattles/SlotMachine/SlotMachine";
+import MinefieldMaddnessContextProvider from "./Context/MinefieldMadnessContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <BrowserRouter>
-        <CrateBattleContextProvider>
-            <div className="grid">
-                <Navbar />
-                <Sidebar />
-                <Routes>
-                    //MainPage Routes =====
-                    <Route path="/" element={<MainPage />} />
-                    //Crate Battle Routes =====
-                    <Route path="/crateBattles" element={<CrateBattleMainPage />} />
-                    <Route path="/crateBattles/ConfigureCrateBattle" element={<ConfigureCrateBattle />} />
-                    <Route
-                        path="/crateBattles/ConfigureCrateBattle/addCrates"
-                        element={
-                            <>
-                                <CrateSelector />
-                                <ConfigureCrateBattle />
-                            </>
-                        }
-                    />
-                    <Route path="/crateBattles/battleNumber" element={<SlotMachine />} />
-                    <Route path="/crateSelector" element={<CrateSelector />} />
-                    <Route path="/MINEFIELDMADNESS" element={<MinefieldMandness />} />
-                </Routes>
-            </div>
-        </CrateBattleContextProvider>
+        <MinefieldMaddnessContextProvider>
+            <CrateBattleContextProvider>
+                <div className="grid">
+                    <Navbar />
+                    <Sidebar />
+                    <Routes>
+                        //MainPage Routes =====
+                        <Route path="/" element={<MainPage />} />
+                        //Crate Battle Routes =====
+                        <Route path="/crateBattles" element={<CrateBattleMainPage />} />
+                        <Route path="/crateBattles/ConfigureCrateBattle" element={<ConfigureCrateBattle />} />
+                        <Route
+                            path="/crateBattles/ConfigureCrateBattle/addCrates"
+                            element={
+                                <>
+                                    <CrateSelector />
+                                    <ConfigureCrateBattle />
+                                </>
+                            }
+                        />
+                        <Route path="/crateBattles/battleNumber" element={<SlotMachine />} />
+                        <Route path="/crateSelector" element={<CrateSelector />} />
+                        <Route path="/MINEFIELDMADNESS" element={<MinefieldMandness />} />
+                    </Routes>
+                </div>
+            </CrateBattleContextProvider>
+        </MinefieldMaddnessContextProvider>
     </BrowserRouter>
 );

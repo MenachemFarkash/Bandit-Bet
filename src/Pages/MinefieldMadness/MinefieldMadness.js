@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import "./MinefieldMadness.css";
+import { MinefieldMaddnessContext } from "../../Context/MinefieldMadnessContext";
+import MinefieldBoard from "../../Components/MinefieldMadness/MinefieldBoard/MinefieldBoard";
 
 const MinefieldMandness = () => {
-    const minefieldOrder = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const { minefieldOrder, startGame, flippedTiles, failed } = useContext(MinefieldMaddnessContext);
 
     return (
         <div className="minefieldContainer">
@@ -36,18 +39,13 @@ const MinefieldMandness = () => {
                             <button>x24</button>
                         </div>
                     </div>
-                    <button>START NEW GAME</button>
+                    <button onClick={() => startGame()}>START NEW GAME</button>
                 </div>
             </div>
             <div className="minesBoard">
-                <div className="minefieldTiles">
-                    {minefieldOrder.map((tile, index) => {
-                        return (
-                            <img src={`/MinefieldMadnessImages/tile${Math.ceil(Math.random() * 8)}.png`} />
-                        );
-                    })}
-                </div>
+                <MinefieldBoard />
             </div>
+            <div className={failed === true ? "flash" : "flashOff"}></div>
         </div>
     );
 };

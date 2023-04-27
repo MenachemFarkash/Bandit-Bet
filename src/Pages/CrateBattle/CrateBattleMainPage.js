@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CrateBattleMainPage.css";
 import BattleCard from "../../Components/CrateBattles/BattleCard/BattleCard";
+import { battle } from "../../Data/CrateBattle/BattlesInfo";
 
 const HomePage = () => {
     const navigate = useNavigate();

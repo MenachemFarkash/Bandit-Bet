@@ -24,22 +24,159 @@
     background-image: url(../../../public/Background/minefieldBoardbackground.jpeg);
     box-shadow: inset 0 0 10px #000, inset 0 0 80px rgba(0, 0, 0, 0.5), inset 0 0 200px rgba(0, 0, 0, 0.8),
         inset 0 0 500px rgba(0, 0, 0, 0.4);
-    filter: brightness(0.6);
+    /* filter: brightness(0.6); */
 }
 
 .minefieldTiles {
+    position: relative;
     width: 500px;
     height: 500px;
     display: grid;
+    gap: 3px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(17, 17, 17);
     color: white;
     filter: brightness(1);
+    cursor: pointer;
 }
 
-.minefieldTiles img {
+.flash {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     width: 100%;
+    animation: flash 0.4s forwards;
+}
+
+.flashOff {
+    width: 0;
+    height: 0;
+}
+
+@keyframes flash {
+    0% {
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+    }
+    49% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgb(146, 9, 9);
+        transform: translateX(20px);
+    }
+    70% {
+        background-color: rgb(146, 9, 9);
+        transform: translatey(20px);
+    }
+    100% {
+        background-color: transparent;
+        pointer-events: none;
+    }
+}
+
+.tile {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.mine {
+    width: 100px;
+    height: 100px;
+    animation: wave 0.4s ease-in-out;
+}
+
+.preGameMine {
+    width: 100px;
+    height: 100px;
+}
+
+.cover {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60px;
+    display: none;
+}
+.coverMine {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90px;
+    display: none;
+}
+
+.reveald {
+    display: block;
+    animation: show 0.4s ease-in-out forwards;
+}
+.revealdMine {
+    display: block;
+    animation: show 0.4s ease-in-out forwards;
+}
+
+.flipped {
+    animation: flip 0.4s ease-in-out forwards;
+}
+
+.endReveal {
+    animation: flip 0.4s ease-in-out forwards;
+}
+
+@keyframes show {
+    0% {
+        display: none;
+        transform: scaleX(0);
+    }
+
+    70% {
+        transform: scaleX(0);
+        display: block;
+        z-index: 1;
+    }
+    100% {
+        display: block;
+        transform: scaleX(1);
+        z-index: 1;
+    }
+}
+
+@keyframes wave {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.3;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: scaleX(1);
+    }
+    49% {
+        filter: brightness(1);
+    }
+    50% {
+        transform: scaleX(0);
+        filter: brightness(0.3);
+    }
+    70% {
+        transform: scaleX(0);
+        filter: brightness(0.3);
+    }
+    100% {
+        transform: scaleX(1);
+        filter: brightness(0.2);
+    }
 }
 
 .gameSettings {
