@@ -20,12 +20,12 @@
 .crateConfigureGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-rows: repeat(9, auto);
     row-gap: 1em;
     box-sizing: border-box;
     width: 100%;
     max-width: 1000px;
-    max-height: 900px;
+    margin-bottom: 3em;
 }
 
 .crateConfigureTitle {

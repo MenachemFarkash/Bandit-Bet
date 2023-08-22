@@ -20,7 +20,9 @@ const ResultCard = (props) => {
             </div>
             <div className="nameAndPrice">
                 <img style={{ width: "75px" }} src={`/Skins/${item.name}.png`} />
-                <h5>{item.name}</h5>
+                <h5 style={{ "--color": `${color}` }} className="itemName">
+                    {item.name}
+                </h5>
                 <div className="scrapLogoPrice">
                     <img src="/Skins/Scrap.png" />
                     <h5>{item.price}</h5>

@@ -2,6 +2,7 @@
     background: linear-gradient(#000000ba, #000000cc), url(../../../public/Background/mainBackground.jpeg);
     background-size: cover;
     display: flex;
+    gap: 1em;
     flex-direction: column;
     align-items: center;
     padding: 2em;
@@ -13,12 +14,47 @@
 
 .gameModesContainer {
     display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
     gap: 15px;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 @media (max-width: 1000px) {
     .mainPageContainer {
         grid-column-start: 1;
     }
+}
+
+.welcomeHadline {
+    margin-top: 3em;
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+    color: white;
+}
+
+.freeScrapContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 1000px;
+}
+
+.freeScrapCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 187px;
+    height: 132px;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.freeScrapCard:hover {
+    transform: translateY(-5px);
 }

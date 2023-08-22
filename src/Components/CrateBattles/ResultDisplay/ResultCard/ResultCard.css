@@ -4,10 +4,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
+    text-align: center;
+    width: 49%;
     height: 190px;
+    box-sizing: border-box;
     background-color: #141814;
-    margin: 0.2em;
+    margin: 0.1em;
     padding: 0.5em;
     animation: pop 0.3s;
 }
@@ -23,6 +25,12 @@
     pointer-events: none;
 }
 
+.resultDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% / 4);
+}
+
 @keyframes pop {
     0% {
         scale: 0;
@@ -35,6 +43,7 @@
 .hashNumber {
     width: 100%;
     align-self: flex-start;
+    text-align: left;
 }
 
 .hashNumber h3 {
@@ -62,5 +71,9 @@
 
 .nameAndPrice h5 {
     margin: 0;
-    color: #e6e6e6;
+    /* color: #e6e6e6; */
+}
+
+.itemName {
+    color: var(--color);
 }

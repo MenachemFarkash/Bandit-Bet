@@ -1,0 +1,47 @@
+.topCarousel {
+    width: 1000px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.carouselSlider {
+    display: flex;
+    height: 55px;
+    width: 800px;
+    gap: 4px;
+    transform: translateX(var(--translate));
+    transition: all 0.3s;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-basis: 146px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 1em;
+
+    background: linear-gradient(90deg, rgba(143, 87, 87, 0.541) 20%, rgba(97, 94, 88, 0.75));
+}
+
+.item img {
+    width: 35px;
+}
+
+.prize,
+.name {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: white;
+}
+
+.prize h6 {
+    margin: 0;
+}
+
+.name p {
+    font-size: small;
+    margin: 0;
+}

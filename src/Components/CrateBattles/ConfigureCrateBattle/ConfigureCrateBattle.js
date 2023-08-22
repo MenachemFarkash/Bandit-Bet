@@ -18,6 +18,8 @@ const ConfigureCrateBattle = () => {
                 count: 1,
                 price: [item.price],
             };
+        } else {
+            acc[item.displayName].count++;
         }
         return acc;
     }, {});

@@ -34,10 +34,13 @@ const MinefieldMaddnessContextProvider = ({ children }) => {
     };
 
     const startGame = () => {
+        if (numberOfMines <= 0 || numberOfMines >= 25) {
+            return;
+        }
         setFailed(false);
         setFlippedTiles([]);
         setGameState("playing");
-        addMinesToBoard(4);
+        addMinesToBoard(numberOfMines);
     };
 
     const good = (mineIndex) => {
@@ -66,6 +69,8 @@ const MinefieldMaddnessContextProvider = ({ children }) => {
                 failed,
                 setFailed,
                 restartEverything,
+                setNumberOfMines,
+                numberOfMines,
             }}
         >
             {children}

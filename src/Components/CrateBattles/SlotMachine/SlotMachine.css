@@ -94,12 +94,14 @@
 
 .gameResultDisplay {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: nowrap;
     overflow-y: auto;
     height: 350px;
     padding: 0.5em 0;
-    width: 917px;
+    width: 100%;
+    max-width: 1350px;
+    scrollbar-width: thin;
 }
 
 .redLines {

@@ -1,0 +1,107 @@
+.MinefieldGameControls {
+    box-sizing: border-box;
+    padding: 0.5em;
+    height: 40%;
+    width: 100%;
+    background-color: #0a0c0a;
+    animation: show 0.6s;
+}
+
+@keyframes grow {
+    0% {
+        display: none;
+    }
+    100% {
+        display: block;
+    }
+}
+
+.gameInfo {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoBox {
+    height: 60px;
+    width: 30%;
+}
+.infoBox h6 {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.infoBox img {
+    width: 20px;
+}
+
+.info {
+    height: 60%;
+    box-sizing: border-box;
+    padding: 4px;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 1px black;
+}
+
+.multipliersList {
+    box-sizing: border-box;
+    margin-bottom: 0.7em;
+}
+
+.multipliersList h6 {
+    margin: 4px;
+    color: white;
+}
+
+.prizesList {
+    display: flex;
+    flex-basis: 200px;
+    gap: 6px;
+    overflow-x: auto;
+    color: white;
+}
+
+.prizesList h5,
+.prizesList h6 {
+    text-align: center;
+    margin: 1px;
+}
+
+.prizesList h5 {
+    color: #b4ec53;
+}
+
+.prizeBox {
+    flex-basis: 60px;
+    flex-shrink: 0;
+    background-color: rgb(20, 20, 20);
+    padding: 0.5em;
+    border: 1px solid rgb(52, 63, 52);
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5em;
+}
+
+.actionButtons button {
+    width: 47%;
+    height: 40px;
+    background-color: #222722;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.actionButtons button:hover {
+    background-color: #333a33;
+}

@@ -1,0 +1,5 @@
+.chat-message-container {
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+}

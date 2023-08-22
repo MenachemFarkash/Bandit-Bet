@@ -84,10 +84,10 @@ const SlotMachine = () => {
                 ""
             )}
             <div className="usersCardList">
-                <UserCard />
-                <UserCard />
-                <UserCard />
-                <UserCard />
+                <UserCard name={"P01SeN"} bot={false} />
+                <UserCard name={"Floyed The Drone"} bot={true} />
+                <UserCard name={"Lil Jimmy"} bot={true} />
+                <UserCard name={"Pat Fenis"} bot={true} />
             </div>
             <div className="gameResultDisplay">
                 <ResultDisplay prizeNumber={0} />

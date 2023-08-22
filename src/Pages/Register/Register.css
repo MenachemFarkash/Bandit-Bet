@@ -1,0 +1,55 @@
+.registerFormContainer {
+    background: linear-gradient(#000000ba, #000000cc), url(../../../public/Background/mainBackground.jpeg);
+    background-size: cover;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.form {
+    background-color: rgba(18, 22, 16, 0.829);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    height: 450px;
+    width: 350px;
+    border-radius: 7px;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formField label {
+    color: white;
+    font-size: 18px;
+}
+
+.formField input {
+    border: none;
+    background-color: #5a5751;
+    height: 35px;
+    color: white;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0.3em;
+    font-size: 20px;
+}
+
+.formField input:focus {
+    outline-style: solid;
+    outline-color: rgb(24, 32, 29);
+}

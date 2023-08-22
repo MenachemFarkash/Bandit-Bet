@@ -1,8 +1,12 @@
-import { createContext, useState } from "react";
+import jwt_decode from "jwt-decode";
+import { createContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 export const CrateBattleContext = createContext();
 
 const CrateBattleContextProvider = (props) => {
     const { children } = props;
+    const Navigate = useNavigate();
 
     const [cratesOrder, setCratesOrder] = useState([]);
     const [selectedCrates, setSelectedCrates] = useState([]);
@@ -14,6 +18,7 @@ const CrateBattleContextProvider = (props) => {
     const [cratesNames, setCratesNames] = useState([]);
     const [crateGameState, setCrateGameState] = useState("not playing");
     const [prizeSum, setPrizeSum] = useState(0);
+    const [battles, setBattles] = useState([]);
 
     const resetEverything = () => {
         setCratesNames([]);
@@ -27,6 +32,8 @@ const CrateBattleContextProvider = (props) => {
         setGameMode("1v1");
         setCrateCounter(0);
     };
+
+    //? client side functions================================
 
     const playGame = (num) => {
         if (num <= cratesOrder.length) {
@@ -96,6 +103,23 @@ const CrateBattleContextProvider = (props) => {
         }
     };
 
+    //? server side functions================================
+
+    const getUserInfo = () => {
+        console.log("user info requested");
+    };
+
+    const getUserId = () => {
+        const userId = jwt_decode(localStorage.getItem("userToken")).userId;
+        console.log(userId);
+    };
+
+    const getAllBattles = async () => {
+        const battles = await axios.get("http://localhost:4000/crateBattle");
+        console.log(battles.data);
+        setBattles(battles.data);
+    };
+
     return (
         <CrateBattleContext.Provider
             value={{
@@ -119,6 +143,12 @@ const CrateBattleContextProvider = (props) => {
                 prizeSum,
                 setPrizeSum,
                 resetEverything,
+                //! server things ===============
+
+                getUserInfo,
+                getUserId,
+                getAllBattles,
+                battles,
             }}
         >
             {children}

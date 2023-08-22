@@ -59,8 +59,10 @@
     display: flex;
     align-items: center;
     justify-self: left;
-    margin-left: 4em;
+    margin-left: 2em;
     gap: 0.5em;
+    overflow-x: hidden;
+    width: 50%;
 }
 
 .cratesList img {

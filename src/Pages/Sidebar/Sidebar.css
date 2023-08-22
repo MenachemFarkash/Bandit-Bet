@@ -1,4 +1,5 @@
 .sidebar {
+    position: relative;
     background-color: #080a08;
     grid-column-start: 1;
     grid-column-end: 2;

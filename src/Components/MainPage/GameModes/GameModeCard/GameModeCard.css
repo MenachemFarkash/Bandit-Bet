@@ -1,13 +1,31 @@
 .cardContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    width: 160px;
-    height: 215px;
-    padding-bottom: 0.5em;
+    box-sizing: border-box;
+    width: 180px;
+    height: 240px;
     cursor: pointer;
     border-radius: 5px;
+    padding-bottom: 0.5em;
+    overflow-y: hidden;
+    transition: all 0.3s;
+    background-size: cover;
+}
+
+.cardContainer:hover {
+    padding-bottom: 0.8em;
+    transform: translateY(-5px);
+}
+
+.modeName {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-bottom: 0.5em; */
 }
 
 .cardContainer h4 {
@@ -16,7 +34,50 @@
     font-size: 2em;
     margin: 0;
     color: white;
+    z-index: 99;
+    pointer-events: none;
 }
+
 .cardContainer img {
     margin-bottom: 1.5em;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.modeCardOverlay {
+    position: absolute;
+    top: 0;
+    height: 110%;
+    width: 100%;
+    background: linear-gradient(transparent, transparent);
+    transition: all 0.4s;
+    opacity: 0;
+    pointer-events: visible;
+}
+
+.modeCardOverlay:hover {
+    opacity: 0.6;
+    background: linear-gradient(transparent, var(--color));
+}
+
+.underDevelopment {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    top: 0;
+    height: 110%;
+    width: 100%;
+    padding-top: 2em;
+    background: linear-gradient(transparent, transparent);
+    transition: all 0.4s;
+    opacity: 0;
+    pointer-events: visible;
+    z-index: 99;
+}
+
+.underDevelopment:hover {
+    opacity: 1;
+    background: linear-gradient(transparent, black);
 }

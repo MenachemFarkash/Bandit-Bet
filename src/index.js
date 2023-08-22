@@ -12,6 +12,8 @@ import ConfigureCrateBattle from "./Components/CrateBattles/ConfigureCrateBattle
 import MinefieldMandness from "./Pages/MinefieldMadness/MinefieldMadness";
 import SlotMachine from "./Components/CrateBattles/SlotMachine/SlotMachine";
 import MinefieldMaddnessContextProvider from "./Context/MinefieldMadnessContext";
+import Register from "./Pages/Register/Register";
+import Login from "./Pages/Login/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +25,8 @@ root.render(
                     <Sidebar />
                     <Routes>
                         //MainPage Routes =====
+                        <Route path="/Register" element={<Register />} />
+                        <Route path="/Login" element={<Login />} />
                         <Route path="/" element={<MainPage />} />
                         //Crate Battle Routes =====
                         <Route path="/crateBattles" element={<CrateBattleMainPage />} />

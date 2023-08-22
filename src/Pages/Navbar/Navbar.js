@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { IoGameController } from "react-icons/io5";
-import { FaFlagCheckered, FaUsers, FaCoins } from "react-icons/fa";
-import { MdHelpCenter } from "react-icons/md";
+import { FaFlagCheckered, FaUsers, FaCoins, FaRegBell } from "react-icons/fa";
+import { MdHelpCenter, MdBackpack } from "react-icons/md";
 
 import NavbarItem from "../../Components/Navbar/MenuItem/NavbarItem";
 const Navbar = () => {
@@ -16,13 +16,21 @@ const Navbar = () => {
                 <NavbarItem icon={<FaUsers style={{ fontSize: "25px" }} />} name={"Top Bandits"} />
                 <NavbarItem icon={<MdHelpCenter style={{ fontSize: "25px" }} />} name={"Help"} />
             </div>
-            <div className="balance">
-                <img src="/Skins/Scrap.png" style={{ width: "20px" }} />
-                <h4>100.03</h4>
-                <button className="WalletButton">
-                    <FaCoins />
-                    Wallet
-                </button>
+            <div className="profile">
+                <div className="balance">
+                    <img src="/Skins/Scrap.png" style={{ width: "20px" }} />
+                    <h4>100.03</h4>
+                    <button className="WalletButton">
+                        <FaCoins />
+                        Wallet
+                    </button>
+                </div>
+                <div className="inventory">
+                    <MdBackpack />
+                </div>
+                <div className="notifications">
+                    <FaRegBell />
+                </div>
             </div>
         </div>
     );
